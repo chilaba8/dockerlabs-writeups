@@ -8,7 +8,7 @@
 
 ## 📌 Resumen Ejecutivo
 
-> [!summary]
+> [!NOTE]
 > Compromiso total del sistema (acceso root) mediante fuerza bruta SSH con un diccionario invertido y una cadena de `sudo` NOPASSWD entre dos usuarios (`tails` → `sonic` → root). No fue necesario explotar vulnerabilidades complejas.
 
 ---
@@ -139,5 +139,5 @@ sudo -u sonic NOPASSWD → sudo ALL NOPASSWD (sonic) → root
 
 ## 🧾 Conclusión
 
-> [!summary]
+> [!NOTE]
 > El acceso inicial se logró mediante credenciales débiles, y la escalada de privilegios fue posible debido a una configuración incorrecta de `sudo` encadenada entre dos usuarios. La cadena de ataque fue directa y basada en malas prácticas de seguridad.

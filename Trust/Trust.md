@@ -7,7 +7,7 @@
 
 ## 📌 Resumen Ejecutivo
 
-> [!summary]
+> [!NOTE]
 > Auditoría de seguridad controlada que culminó con compromiso total del host (acceso root). La intrusión fue posible mediante una combinación de exposición de información sensible vía web, credenciales débiles y configuración insegura de privilegios `sudo` — demostrando cómo múltiples debilidades de severidad media pueden encadenarse hasta producir un impacto crítico.
 
 **Objetivo de la auditoría:** identificar servicios expuestos, enumerar recursos accesibles, detectar configuraciones inseguras, evaluar la robustez de autenticación y comprobar posibilidades de escalada de privilegios.
@@ -118,7 +118,7 @@ Cuando `vim` se ejecuta mediante `sudo`, hereda privilegios de root; la shell in
 whoami
 # root
 ```
-![root 2](anexos/root 2.png)
+![root 2](anexos/root%202.png)
 
 **Impacto:** Compromiso total del host — acceso remoto, enumeración interna completa, elevación de privilegios, control total, posible persistencia y capacidad de movimiento lateral. **Nivel de riesgo: Crítico.**
 
@@ -156,5 +156,5 @@ sudo vim NOPASSWD (H3) → root
 
 ## 🧾 Conclusión
 
-> [!summary]
+> [!NOTE]
 > La auditoría evidenció múltiples debilidades encadenables (fuga de información, credenciales débiles y `sudo` mal configurado) que permitieron el compromiso total del host objetivo. Demuestra la importancia de gestionar correctamente privilegios, aplicar políticas seguras de autenticación y minimizar la exposición de información sensible.

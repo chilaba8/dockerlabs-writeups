@@ -8,7 +8,7 @@
 
 ## 📌 Resumen Ejecutivo
 
-> [!summary]
+> [!NOTE]
 > Compromiso total de la máquina (acceso root) mediante una contraseña filtrada en `index.php`, identificación del usuario propietario por fuerza bruta dirigida, y secuestro de un script Python ejecutable con `sudo` sin contraseña.
 
 ---
@@ -135,5 +135,5 @@ acceso SSH → secuestro de /opt/script.py con sudo NOPASSWD (H3) → root
 
 ## 🧾 Conclusión
 
-> [!summary]
+> [!NOTE]
 > El compromiso total se logró encadenando tres fallos: fuga de credencial en `index.php`, reutilización de esa misma contraseña en la cuenta SSH, y un script Python modificable ejecutable con `sudo` sin contraseña.

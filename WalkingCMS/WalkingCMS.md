@@ -7,7 +7,7 @@
 
 ## 📌 Resumen Ejecutivo
 
-> [!summary]
+> [!NOTE]
 > Compromiso total del servidor mediante mala gestión de credenciales en WordPress (fuerza bruta con WPScan) y una configuración insegura del bit SUID en el binario `env`, permitiendo escalar privilegios de `www-data` a `root`.
 
 ---
@@ -108,11 +108,11 @@ whoami
 
 ## 📸 Evidencias
 
-- Nmap → Puerto 80 abierto: ![nmap_cms 1](anexos/nmap_cms 1.png)
-- Gobuster → `/wordpress` y endpoints: ![gobuster1_cms 1](anexos/gobuster1_cms 1.png) ![guster_2_cms 1](anexos/guster_2_cms 1.png)
-- WPScan → credenciales válidas: ![wpscan_contraseña_cms 1](anexos/wpscan_contraseña_cms 1.png) ![wpscan_password_cms 1](anexos/wpscan_password_cms 1.png)
-- Reverse shell → `www-data`: ![nc_1_acceso 1](anexos/nc_1_acceso 1.png)
-- PrivEsc → `root`: ![nc_2_acceso 1](anexos/nc_2_acceso 1.png)
+- Nmap → Puerto 80 abierto: ![nmap_cms 1](anexos/nmap_cms%201.png)
+- Gobuster → `/wordpress` y endpoints: ![gobuster1_cms 1](anexos/gobuster1_cms%201.png) ![guster_2_cms 1](anexos/guster_2_cms%201.png)
+- WPScan → credenciales válidas: ![wpscan_contraseña_cms 1](anexos/wpscan_contraseña_cms%201.png) ![wpscan_password_cms 1](anexos/wpscan_password_cms%201.png)
+- Reverse shell → `www-data`: ![nc_1_acceso 1](anexos/nc_1_acceso%201.png)
+- PrivEsc → `root`: ![nc_2_acceso 1](anexos/nc_2_acceso%201.png)
 
 ---
 
@@ -134,5 +134,5 @@ Enumeración → WordPress → Fuerza bruta (H1) → RCE vía editor de temas (H
 
 ## 🧾 Conclusión
 
-> [!summary]
+> [!NOTE]
 > Enumeración → fuerza bruta con credenciales débiles → RCE vía editor de temas → escalada por SUID mal configurado en `env`. Compromiso total del sistema.

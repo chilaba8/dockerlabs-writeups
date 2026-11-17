@@ -7,7 +7,7 @@
 
 ## 📌 Resumen Ejecutivo
 
-> [!summary]
+> [!NOTE]
 > Compromiso total del sistema (acceso root) mediante enumeración SMB (token JWT + credenciales en un backup), acceso SSH con credenciales filtradas, inyección de una reverse shell a través de un recurso web accesible, y escalada de privilegios vía `sudo` sobre `/usr/sbin/service`.
 
 ---
@@ -19,7 +19,7 @@ nmap -p- --open -sS -sC -sV -T4 -n -vvv -Pn 172.17.0.2
 ```
 Puertos más interesantes: **22, 80 y 445**.
 
-![escaneo nmap maquina allien](anexos/escaneo nmap maquina allien.png)
+![escaneo nmap maquina allien](anexos/escaneo%20nmap%20maquina%20allien.png)
 
 ### Enumeración web
 ```bash
@@ -92,7 +92,7 @@ Contraseña encontrada: `50cent`
 
 Con acceso al recurso, se descarga y lee el archivo `backup24`:
 ![allien_documento](anexos/allien_documento.png)
-![allien credenciales](anexos/allien credenciales.png)
+![allien credenciales](anexos/allien%20credenciales.png)
 
 Se obtienen varios usuarios con sus contraseñas, incluyendo una cuenta de administrador.
 
@@ -186,5 +186,5 @@ reverse shell vía recurso web (H4) → sudo service NOPASSWD (H5) → root
 
 ## 🧾 Conclusión
 
-> [!summary]
+> [!NOTE]
 > Muchos caminos en la web resultaron ser callejones sin salida; una vez identificada la necesidad de obtener una reverse shell y el binario por donde escalar privilegios, la explotación fue directa.

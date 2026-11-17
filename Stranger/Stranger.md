@@ -8,7 +8,7 @@
 
 ## 📌 Resumen Ejecutivo
 
-> [!summary]
+> [!NOTE]
 > Compromiso total del sistema (acceso root) mediante fuga de un usuario válido en la web, fuerza bruta FTP, descifrado de una clave privada RSA con CyberChef, acceso SSH con la contraseña resultante, y movimiento lateral por reutilización de credenciales hasta una cuenta con `sudo` sin restricciones.
 
 **Metodología:** Reconocimiento → Enumeración → Explotación → Post-explotación → Escalada de privilegios.
@@ -181,5 +181,5 @@ reutilización de contraseña a su admin → sudo ALL (H4) → root
 
 ## 🧾 Conclusión
 
-> [!summary]
+> [!NOTE]
 > Compromiso total alcanzado encadenando exposición de FTP, credenciales débiles y reutilizadas, fuga de información en la web, una clave privada accesible y un usuario con privilegios `sudo` excesivos.

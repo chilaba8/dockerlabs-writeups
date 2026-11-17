@@ -8,7 +8,7 @@
 
 ## 📌 Resumen Ejecutivo
 
-> [!summary]
+> [!NOTE]
 > Compromiso total del sistema (acceso root) mediante una vulnerabilidad crítica de subida de archivos sin restricción (Arbitrary File Upload), que permitió ejecución remota de código vía una reverse shell en PHP, seguida de una mala configuración de privilegios `sudo` sobre `/usr/bin/env` para escalar a root.
 
 ---
@@ -86,7 +86,7 @@ sudo /usr/bin/env /bin/sh
 ```
 El comando otorga una shell con privilegios máximos.
 
-![root 1](anexos/root 1.png)
+![root 1](anexos/root%201.png)
 *Flag de root y whoami*
 
 **Impacto:** Compromiso total del sistema.
@@ -115,5 +115,5 @@ reverse shell como www-data → sudo env NOPASSWD (H2) → root
 
 ## 🧾 Conclusión
 
-> [!summary]
+> [!NOTE]
 > La máquina presentaba una vulnerabilidad crítica de Arbitrary File Upload que permitió RCE inmediata, y una mala configuración de `sudo` sobre `/usr/bin/env` que permitió escalar directamente hasta acceso root.

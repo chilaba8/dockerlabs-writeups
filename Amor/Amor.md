@@ -8,7 +8,7 @@
 
 ## 📌 Resumen Ejecutivo
 
-> [!summary]
+> [!NOTE]
 > Compromiso total del sistema (acceso root) mediante una cadena de fuerza bruta SSH, esteganografía en una imagen personal del usuario, reutilización de credenciales para movimiento lateral, y una configuración insegura de `sudo` sobre el intérprete de Ruby.
 
 ---
@@ -23,7 +23,7 @@ nmap -p- --open -sS -sC -sV -T4 -n -vvv -O -Pn 172.17.0.2
 - **22/tcp → SSH** (OpenSSH 9.6p1 - Ubuntu)
 - **80/tcp → HTTP** (Apache 2.4.58 - Ubuntu)
 
-![amor_nmap 5](anexos/amor_nmap 5.png)
+![amor_nmap 5](anexos/amor_nmap%205.png)
 
 ### Enumeración web
 El servicio HTTP muestra una aplicación web corporativa (**SecurSEC S.L**), con posibles usuarios `carlota` y `oscar` (este último inferido posteriormente), indicios de credenciales débiles e información sensible expuesta.
@@ -46,7 +46,7 @@ hydra -l carlota -P /usr/share/wordlists/rockyou.txt ssh://172.17.0.2 -t 64
 ```
 Credenciales obtenidas: `carlota` / `babygirl`
 
-![amor_hydra 1](anexos/amor_hydra 1.png)
+![amor_hydra 1](anexos/amor_hydra%201.png)
 
 ```bash
 ssh carlota@172.17.0.2
@@ -160,5 +160,5 @@ Enumeración web → Fuerza bruta SSH (carlota) → Esteganografía + Base64 (mo
 
 ## 🧾 Conclusión
 
-> [!summary]
+> [!NOTE]
 > La intrusión combinó fuerza bruta SSH, reutilización de credenciales vía esteganografía para movimiento lateral, y una configuración insegura de `sudo`, resultando en compromiso total del sistema.

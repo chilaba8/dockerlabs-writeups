@@ -7,7 +7,7 @@
 
 ## 📌 Resumen Ejecutivo
 
-> [!summary]
+> [!NOTE]
 > Compromiso total de la máquina (acceso root) explotando una exposición de información sensible en un directorio de backend (`/backend/`) y una mala configuración de privilegios `sudo` que permite abusar del editor `nano` para obtener ejecución de comandos.
 
 ---
@@ -133,5 +133,5 @@ acceso SSH → sudo nano NOPASSWD (H3) → root
 
 ## 🧾 Conclusión
 
-> [!summary]
+> [!NOTE]
 > Se logró el compromiso total de la máquina explotando una exposición de información sensible en `/backend/` y una mala configuración de privilegios `sudo` que permitía abusar de un editor de texto para obtener ejecución de comandos.

@@ -7,7 +7,7 @@
 
 ## 📌 Resumen Ejecutivo
 
-> [!summary]
+> [!NOTE]
 > Reconocimiento y enumeración web hasta la obtención de una credencial válida oculta mediante código Brainfuck embebido en la web. **Esta nota queda incompleta** — no se documenta el uso de la credencial obtenida para lograr acceso ni escalada de privilegios.
 
 ---
@@ -18,13 +18,13 @@
 # Despliegue del laboratorio
 bash auto_deploy.sh agua_de_mayo.tar
 ```
-![maquina agua de mayo](anexos/maquina agua de mayo.png)
+![maquina agua de mayo](anexos/maquina%20agua%20de%20mayo.png)
 
 ```bash
 nmap -p- --open -sS -sC -sV -T4 -n -vvv -Pn 172.17.0.2
 ```
 ![nmapagua1](anexos/nmapagua1.png)
-![nmapagua2 1](anexos/nmapagua2 1.png)
+![nmapagua2 1](anexos/nmapagua2%201.png)
 
 Puertos 22 y 80 abiertos.
 
@@ -96,5 +96,5 @@ Enumeración web → código fuente ofuscado (Brainfuck) → credencial "agua:be
 
 ## 🧾 Conclusión
 
-> [!summary]
+> [!NOTE]
 > Nota incompleta. Queda pendiente verificar si la credencial `agua`/`bebeaguaqueessano` permite acceso SSH y documentar la fase de escalada de privilegios hasta compromiso total.

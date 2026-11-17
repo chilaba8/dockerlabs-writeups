@@ -8,7 +8,7 @@
 
 ## 📌 Resumen Ejecutivo
 
-> [!summary]
+> [!NOTE]
 > Compromiso total del sistema (acceso root) mediante una cadena de vulnerabilidades: FTP anónimo, exposición de información sensible, credenciales débiles reutilizadas y mala configuración de `sudo`.
 
 **Metodología:** Enumeración → Acceso inicial → Escalada de privilegios.
@@ -49,7 +49,8 @@ En el código fuente:
 ![obsession_7](anexos/obsession_7.png)
 *Código fuente: usuario reutilizado en todos los servicios*
 
-> [!warning] Indica reutilización de credenciales
+> [!WARNING]
+> Indica reutilización de credenciales
 
 ---
 
@@ -79,7 +80,8 @@ Archivos encontrados: `chat-gonza.txt`, `pendientes.txt`
 ![obsession_5](anexos/obsession_5.png)
 *Contenido de pendientes.txt (pista de permisos inseguros)*
 
-> [!danger] Posible escalada de privilegios anticipada por la propia víctima en sus notas.
+> [!CAUTION]
+> Posible escalada de privilegios anticipada por la propia víctima en sus notas.
 
 **Impacto:** Fuga de nombre de usuario válido y anticipo de una vulnerabilidad de escalada de privilegios.
 
@@ -171,7 +173,7 @@ fuerza bruta SSH → sudo vim NOPASSWD → root
 
 ## 🧾 Conclusión
 
-> [!summary]
+> [!NOTE]
 > El sistema es comprometido mediante una cadena de vulnerabilidades comunes, destacando fallos en la gestión de credenciales y privilegios: FTP anónimo, reutilización de usuario, contraseña débil y mala configuración de sudo.
 
 **Nivel:** Fácil – Intermedio · **Técnicas clave:** Enumeración, Credential attack, Privilege escalation.
